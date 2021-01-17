@@ -36,7 +36,52 @@ class AudioRecorder: NSObject, ObservableObject {
         }
     }
     
+    ///TODO: IMPLEMENT
+    // Find iOS device built in mic input by querying the available inputs for the one where the port type equals the built in mic, and sets as preferred input
+    private func enableBuiltInMic() {
+        // Get the shared audio session
+        let session = AVAudioSession.sharedInstance()
+        
+        // Find built in mic input, if we can't we return
+        guard let availableInputs = session.availableInputs,
+              let builtInMicInput = availableInputs.first(where: { $0.portType == .builtInMic }) else {
+            print("The device must have a built in microphone")
+            return
+        }
+        
+        // Set the built in microphone input as the preferred input
+        do {
+            
+            try session.setPreferredInput(builtInMicInput)
+            
+        } catch {
+            print("uh oh, unable to set the built in mic as the preferred input")
+        }
+        
+    }
     
+    ///TODO: IMPLEMENT
+    
+//    func selectRecordingOption(_ option: RecordingOption, orientation: Orientation, completion: (StereoLayout) -> Void) {
+//
+//        // Get shared audio Session
+//        let session = AVAudioSession.sharedInstance()
+//
+//        // Find built in mic input data sources and select the one that matches the specified name
+//        guard let preferredInput = session.preferredInput,
+//              let dataSources = preferredInput.dataSources,
+//              let newDataSource = dataSources.first(where: { $0.dataSourceName == option.dataSourceName}),
+//              let supportedPolarPatterns = newDataSource.supportedPolarPatterns else {
+//            completion(.none)
+//            return
+//        }
+//
+//        do {
+//            isStereoSupported = supportedPolarPatterns.contains(.stereo)
+//        }
+//
+//    }
+//
     
     func startRecording() {
         
@@ -46,8 +91,8 @@ class AudioRecorder: NSObject, ObservableObject {
         
         // Define type for recording session and activate
         do {
-            
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            // options routes audio to speakers (not receiver) and bluetooth headphones
+            try recordingSession.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .allowBluetooth])
             try recordingSession.setActive(true)
             
         } catch {
@@ -58,16 +103,19 @@ class AudioRecorder: NSObject, ObservableObject {
         // Specify location of (saved) Audio recording
         let savePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
-        let audioFilename = savePath.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY'at'_HH:mm:ss")).m4a")
+        let audioFilename = savePath.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY'at'_HH:mm:ss")).wav")
         
         // Define settings for recording params (Should be modifiable by user in a settings view)
         
-        //TODO: setup stereo audio recording in hq audio
-        let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000,
+        //TODO: implement check for AVNumberOfChannelsKey to record stereo if available.
+        // Setup for .wav linear pcm at 44khz 16bit
+        let settings: [String: Any] = [
+            AVFormatIDKey: Int(kAudioFormatLinearPCM),
+            AVLinearPCMIsNonInterleaved: false,
+            AVSampleRateKey: 44_100.0,
             AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue]
+            AVLinearPCMBitDepthKey: 16
+        ]
         
         
         
@@ -82,7 +130,7 @@ class AudioRecorder: NSObject, ObservableObject {
             recording = true
             
         } catch {
-            print("ERROR, COULD NOT BEGIN RECORDING")
+            print("ERROR, COULD NOT BEGIN RECORDING AT: \(error.localizedDescription)")
         }
     }
     

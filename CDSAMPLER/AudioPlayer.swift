@@ -36,6 +36,7 @@ class AudioPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let playbackSession = AVAudioSession.sharedInstance()
         
         // Audio is played through earpiece by default, set to speaker
+        // NOTE: probably dont need anymore?
         do {
             try playbackSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
         } catch {
