@@ -29,6 +29,13 @@ struct SettingsView: View {
                         }
                     }
                 }
+                
+                // About section
+                Section(header: Text("ABOUT")) {
+                    Text("BUILD NUMBER: 0.0.0")
+                }
+                
+                
             }
             
             .navigationBarTitle("SETTINGS")

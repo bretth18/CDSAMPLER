@@ -17,6 +17,7 @@ struct SamplerView: View {
         
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         
+        // Initialize the AudioRecorder
         audioRecorder = AudioRecorder()
         
     }
@@ -35,9 +36,11 @@ struct SamplerView: View {
                     // RecordingListView component
                     RecordingListView(audioRecorder: AudioRecorder())
                 
+                    
+                    
                     if audioRecorder.recording == false {
                         Button(action: {self.audioRecorder.startRecording()}) {
-                            Image(systemName: "circle.fill")
+                            Image(systemName: "record.circle")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 100, height: 100)
@@ -49,7 +52,7 @@ struct SamplerView: View {
                     } else {
                         
                         Button(action: {self.audioRecorder.stopRecording()}) {
-                            Image(systemName: "stop.fill")
+                            Image(systemName: "stop.circle")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 100, height: 100)
@@ -58,6 +61,8 @@ struct SamplerView: View {
                                 .padding(.bottom, 40)
                         }
                     }
+                    
+                    
                 }
             }
             .navigationTitle("CD_SAMPLER").foregroundColor(.white)
@@ -66,12 +71,13 @@ struct SamplerView: View {
                                     HStack {
                                         EditButton()
                                         Button(action: {}, label: {NavigationLink(destination: SettingsView()) {
-                                            Text("settings")
+                                            Image(systemName: "gearshape")
                                         }})
                                     }
                                 
                 )
         }
+        
     }
 }
 
