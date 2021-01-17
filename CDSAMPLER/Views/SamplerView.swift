@@ -61,7 +61,16 @@ struct SamplerView: View {
                 }
             }
             .navigationTitle("CD_SAMPLER").foregroundColor(.white)
-            .navigationBarItems(trailing: EditButton())
+            .navigationBarItems(trailing:
+                                    // Navbar buttons
+                                    HStack {
+                                        EditButton()
+                                        Button(action: {}, label: {NavigationLink(destination: SettingsView()) {
+                                            Text("settings")
+                                        }})
+                                    }
+                                
+                )
         }
     }
 }

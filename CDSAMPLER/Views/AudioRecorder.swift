@@ -109,6 +109,7 @@ class AudioRecorder: NSObject, ObservableObject {
         
         //TODO: implement check for AVNumberOfChannelsKey to record stereo if available.
         // Setup for .wav linear pcm at 44khz 16bit
+        ///TODO: implement settings for AVFormatIDKey
         let settings: [String: Any] = [
             AVFormatIDKey: Int(kAudioFormatLinearPCM),
             AVLinearPCMIsNonInterleaved: false,
@@ -171,6 +172,7 @@ class AudioRecorder: NSObject, ObservableObject {
         
         objectWillChange.send(self)
     }
+    
     
     // accepts array of URLS and deltes corresponding files from the directory
     // on completion we update our recordings array using getRecording()

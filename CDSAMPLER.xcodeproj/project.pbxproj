@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D844436625B3BF9600A15EF2 /* CDSAMPLERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844436525B3BF9600A15EF2 /* CDSAMPLERApp.swift */; };
-		D844436825B3BF9600A15EF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844436725B3BF9600A15EF2 /* ContentView.swift */; };
 		D844436A25B3BF9900A15EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D844436925B3BF9900A15EF2 /* Assets.xcassets */; };
 		D844436D25B3BF9900A15EF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D844436C25B3BF9900A15EF2 /* Preview Assets.xcassets */; };
 		D844437725B3BFF000A15EF2 /* SamplerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844437625B3BFF000A15EF2 /* SamplerView.swift */; };
@@ -18,12 +17,14 @@
 		D844438625B3CB7F00A15EF2 /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844438525B3CB7F00A15EF2 /* RecordingDataModel.swift */; };
 		D844438925B3CD5900A15EF2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844438825B3CD5900A15EF2 /* Helper.swift */; };
 		D844438E25B3DABF00A15EF2 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844438D25B3DABE00A15EF2 /* AudioPlayer.swift */; };
+		D844439325B4D54A00A15EF2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844439225B4D54A00A15EF2 /* Settings.swift */; };
+		D844439725B4D8AF00A15EF2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844439625B4D8AF00A15EF2 /* SettingsView.swift */; };
+		D844439A25B4E57B00A15EF2 /* StereoLayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844439925B4E57B00A15EF2 /* StereoLayoutModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D844436225B3BF9600A15EF2 /* CDSAMPLER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDSAMPLER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D844436525B3BF9600A15EF2 /* CDSAMPLERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSAMPLERApp.swift; sourceTree = "<group>"; };
-		D844436725B3BF9600A15EF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D844436925B3BF9900A15EF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D844436C25B3BF9900A15EF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D844436E25B3BF9900A15EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +36,9 @@
 		D844438825B3CD5900A15EF2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D844438B25B3D29B00A15EF2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D844438D25B3DABE00A15EF2 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		D844439225B4D54A00A15EF2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D844439625B4D8AF00A15EF2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D844439925B4E57B00A15EF2 /* StereoLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StereoLayoutModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +73,13 @@
 			isa = PBXGroup;
 			children = (
 				D844437A25B3C36E00A15EF2 /* AudioRecorder.swift */,
+				D844439225B4D54A00A15EF2 /* Settings.swift */,
 				D844438D25B3DABE00A15EF2 /* AudioPlayer.swift */,
 				D844438825B3CD5900A15EF2 /* Helper.swift */,
 				D844438425B3CB6F00A15EF2 /* Models */,
 				D844438025B3C92C00A15EF2 /* Extensions */,
 				D844437525B3BFD700A15EF2 /* Views */,
 				D844436525B3BF9600A15EF2 /* CDSAMPLERApp.swift */,
-				D844436725B3BF9600A15EF2 /* ContentView.swift */,
 				D844436925B3BF9900A15EF2 /* Assets.xcassets */,
 				D844436E25B3BF9900A15EF2 /* Info.plist */,
 				D844436B25B3BF9900A15EF2 /* Preview Content */,
@@ -96,6 +100,7 @@
 			children = (
 				D844437625B3BFF000A15EF2 /* SamplerView.swift */,
 				D844437D25B3C6DF00A15EF2 /* RecordingListView.swift */,
+				D844439625B4D8AF00A15EF2 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				D844438525B3CB7F00A15EF2 /* RecordingDataModel.swift */,
+				D844439925B4E57B00A15EF2 /* StereoLayoutModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,9 +193,11 @@
 			files = (
 				D844437725B3BFF000A15EF2 /* SamplerView.swift in Sources */,
 				D844437E25B3C6DF00A15EF2 /* RecordingListView.swift in Sources */,
+				D844439A25B4E57B00A15EF2 /* StereoLayoutModel.swift in Sources */,
 				D844438E25B3DABF00A15EF2 /* AudioPlayer.swift in Sources */,
 				D844438625B3CB7F00A15EF2 /* RecordingDataModel.swift in Sources */,
-				D844436825B3BF9600A15EF2 /* ContentView.swift in Sources */,
+				D844439325B4D54A00A15EF2 /* Settings.swift in Sources */,
+				D844439725B4D8AF00A15EF2 /* SettingsView.swift in Sources */,
 				D844437B25B3C36E00A15EF2 /* AudioRecorder.swift in Sources */,
 				D844436625B3BF9600A15EF2 /* CDSAMPLERApp.swift in Sources */,
 				D844438225B3C93E00A15EF2 /* DateExtensions.swift in Sources */,
