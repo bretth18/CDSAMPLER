@@ -39,6 +39,7 @@
 		D844439225B4D54A00A15EF2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D844439625B4D8AF00A15EF2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D844439925B4E57B00A15EF2 /* StereoLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StereoLayoutModel.swift; sourceTree = "<group>"; };
+		D844439C25B4FF3B00A15EF2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		D844435925B3BF9500A15EF2 = {
 			isa = PBXGroup;
 			children = (
+				D844439C25B4FF3B00A15EF2 /* .gitignore */,
 				D844438B25B3D29B00A15EF2 /* README.md */,
 				D844436425B3BF9600A15EF2 /* CDSAMPLER */,
 				D844436325B3BF9600A15EF2 /* Products */,
