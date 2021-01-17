@@ -83,6 +83,7 @@ class AudioRecorder: NSObject, ObservableObject {
 //    }
 //
     
+    /// startRecording begins the recording AVAudioSession,  saves file
     func startRecording() {
         
         // Create recording session with AVAudioSession
@@ -136,6 +137,7 @@ class AudioRecorder: NSObject, ObservableObject {
     }
     
     
+    /// stopRecording stops the AVAudioSession recorder, updates the state
     func stopRecording() {
         
         // Stop audio recording, update state
@@ -147,7 +149,7 @@ class AudioRecorder: NSObject, ObservableObject {
     }
     
     
-    // Getter function to access locally stored recordings
+    /// getRecordings fetches the audio files from the directory, accesses locally stored recordings
     func getRecordings() {
         
         // Each time we get the recordings we need to empty our "recordings" array to avoid displaying the same recording multiple times
