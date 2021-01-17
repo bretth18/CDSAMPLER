@@ -123,6 +123,24 @@ class AudioRecorder: NSObject, ObservableObject {
         
         objectWillChange.send(self)
     }
+    
+    // accepts array of URLS and deltes corresponding files from the directory
+    // on completion we update our recordings array using getRecording()
+    func deleteRecording(urlsToDelete: [URL]) {
+        
+        for url in urlsToDelete {
+            
+            print(url)
+            
+            do {
+                try FileManager.default.removeItem(at: url)
+            } catch {
+                print("ERROR, FILE COULD NOT BE DELETED")
+            }
+        }
+        
+        getRecordings()
+    }
 }
 
 

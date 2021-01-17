@@ -61,6 +61,7 @@ struct SamplerView: View {
                 }
             }
             .navigationTitle("CD_SAMPLER").foregroundColor(.white)
+            .navigationBarItems(trailing: EditButton())
         }
     }
 }
