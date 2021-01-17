@@ -28,7 +28,10 @@ struct RecordingRow: View {
         
         // Assign each row to the path of the audio file
         HStack {
-            Text("\(audioURL.lastPathComponent)")
+            
+//            Color.black.ignoresSafeArea()
+            
+            Text("\(audioURL.lastPathComponent)").foregroundColor(.white)
             Spacer()
         }
     }
