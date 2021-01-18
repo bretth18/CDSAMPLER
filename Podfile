@@ -4,4 +4,5 @@ platform :ios, '9.0'
 target 'CDSAMPLER' do
   pod 'FirebaseUI/OAuth'
   pod 'FirebaseUI/Phone'
+  pod 'Firebase/Analytics'
 end
