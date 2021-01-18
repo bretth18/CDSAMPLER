@@ -74,8 +74,8 @@
 		D844436425B3BF9600A15EF2 /* CDSAMPLER */ = {
 			isa = PBXGroup;
 			children = (
+				D844439F25B5156200A15EF2 /* View Models */,
 				D844439D25B501BA00A15EF2 /* Audio */,
-				D844439225B4D54A00A15EF2 /* Settings.swift */,
 				D844438825B3CD5900A15EF2 /* Helper.swift */,
 				D844438425B3CB6F00A15EF2 /* Models */,
 				D844438025B3C92C00A15EF2 /* Extensions */,
@@ -130,6 +130,14 @@
 				D844437A25B3C36E00A15EF2 /* AudioRecorder.swift */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		D844439F25B5156200A15EF2 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				D844439225B4D54A00A15EF2 /* Settings.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
