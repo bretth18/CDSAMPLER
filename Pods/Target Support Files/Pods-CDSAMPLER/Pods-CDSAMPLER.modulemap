@@ -1,0 +1,6 @@
+framework module Pods_CDSAMPLER {
+  umbrella header "Pods-CDSAMPLER-umbrella.h"
+
+  export *
+  module * { export * }
+}
