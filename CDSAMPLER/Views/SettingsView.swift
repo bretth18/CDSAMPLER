@@ -81,6 +81,7 @@ struct SettingsView: View {
             }
             
             .navigationBarTitle("SETTINGS")
+
         }
     }
     

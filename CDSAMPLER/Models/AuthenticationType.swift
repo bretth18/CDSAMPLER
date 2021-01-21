@@ -23,7 +23,7 @@ enum AuthenticationType: String {
     var footerText: String {
         switch self {
             case .login:
-                return "No account, signup!"
+                return "No account? signup!"
             
             case .signup:
                 return "Already have an account? login!"

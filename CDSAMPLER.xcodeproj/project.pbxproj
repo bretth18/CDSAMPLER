@@ -37,6 +37,7 @@
 		D8F3B28025B8FD9E00BC5D73 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3B27F25B8FD9E00BC5D73 /* ProgressView.swift */; };
 		D8F3B2A325B9091800BC5D73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8F3B2A225B9091800BC5D73 /* GoogleService-Info.plist */; };
 		D8F3B2A425B9091800BC5D73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8F3B2A225B9091800BC5D73 /* GoogleService-Info.plist */; };
+		D8F3B2AE25B92B8400BC5D73 /* BackgroundAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3B2AD25B92B8400BC5D73 /* BackgroundAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		D8F3B27B25B8FC2400BC5D73 /* SignInAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleButton.swift; sourceTree = "<group>"; };
 		D8F3B27F25B8FD9E00BC5D73 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		D8F3B2A225B9091800BC5D73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8F3B2AD25B92B8400BC5D73 /* BackgroundAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				D8F3B27A25B8FC0900BC5D73 /* UIKitViews */,
 				D844437625B3BFF000A15EF2 /* SamplerView.swift */,
 				D8F3B25C25B8DDE800BC5D73 /* SplashScreenView.swift */,
+				D8F3B2AD25B92B8400BC5D73 /* BackgroundAnimationView.swift */,
 				D8F3B26025B8E18700BC5D73 /* LogoTitleView.swift */,
 				D8F3B26425B8E4B900BC5D73 /* AuthenticationFormView.swift */,
 				D8F3B25025B8DAA800BC5D73 /* ContentView.swift */,
@@ -424,6 +427,7 @@
 				D844436625B3BF9600A15EF2 /* CDSAMPLERApp.swift in Sources */,
 				D8F3B25125B8DAA800BC5D73 /* ContentView.swift in Sources */,
 				D844438225B3C93E00A15EF2 /* DateExtensions.swift in Sources */,
+				D8F3B2AE25B92B8400BC5D73 /* BackgroundAnimationView.swift in Sources */,
 				D844438925B3CD5900A15EF2 /* Helper.swift in Sources */,
 				D8F3B25525B8DBAB00BC5D73 /* AuthenticationView.swift in Sources */,
 			);

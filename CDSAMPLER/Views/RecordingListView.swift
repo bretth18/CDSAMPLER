@@ -73,6 +73,21 @@ struct RecordingRow: View {
                 }
                 
             }
+            Spacer()
+            
+            // Upload Button
+            Button(action: {print("button at ") }) {
+                Image(systemName: "square.and.arrow.up")
+            }
+            .buttonStyle(BorderlessButtonStyle())
+            
+            // Edit Button
+            Button(action: {print("button edit ") }) {
+                Image(systemName: "pencil")
+            }
+            .buttonStyle(PlainButtonStyle())
+            
+            Spacer()
         }
     }
 }

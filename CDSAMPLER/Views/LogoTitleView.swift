@@ -11,12 +11,14 @@ struct LogoTitleView: View {
     var body: some View {
         
         VStack {
-            Image("waveform")
-                .resizable()
-                .frame(width: 100, height: 100)
+            Image(systemName: "waveform")
+                .foregroundColor(.white)
+                .font(.largeTitle)
+                .frame(width: 180, height: 180)
             
             Text("CD_SAMPLER")
-                .font(.title)
+                .font(.largeTitle)
+                .fontWeight(.bold)
                 .lineLimit(2)
             
             Text("record/create/share samples")

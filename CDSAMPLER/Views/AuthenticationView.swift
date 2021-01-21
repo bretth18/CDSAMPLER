@@ -19,6 +19,7 @@ struct AuthenticationView: View {
         ZStack {
             SplashScreenView()
             
+            
             VStack(spacing: 32) {
                 
                 LogoTitleView()
@@ -33,7 +34,7 @@ struct AuthenticationView: View {
                 SignInAppleButton {
                     self.authState.login(with: .signInWithApple)
                 }
-                .frame(width: 130, height: 44)
+                .frame(width: 200, height: 50)
             }
             .offset(y: UIScreen.main.bounds.width > 320 ? -75 : 0)
         }

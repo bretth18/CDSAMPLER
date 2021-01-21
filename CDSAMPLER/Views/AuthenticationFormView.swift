@@ -67,7 +67,7 @@ struct AuthenticationFormView: View {
                 Text(authType.text)
                     .font(.callout)
             }
-            .buttonStyle(CDButtonStyle(backgroundColor: .red, foregroundColor: .white, isDisabled: false))
+            .buttonStyle(CDButtonStyle(backgroundColor: .black, foregroundColor: .white, isDisabled: false))
             .disabled(email.count == 0 && password.count == 0)
             
             

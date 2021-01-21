@@ -12,6 +12,9 @@ import Combine
 
 class Settings: ObservableObject {
     
+
+
+    
     @Published var username: String {
         didSet {
             UserDefaults.standard.set(username, forKey: "username")
@@ -42,4 +45,7 @@ class Settings: ObservableObject {
         self.isPrivate = UserDefaults.standard.object(forKey: "isAccountPrivate") as? Bool ?? true
         self.recordingCodec = UserDefaults.standard.object(forKey: "recordingCodec") as? String ?? "LinearPCM"
     }
+    
+    
+
 }

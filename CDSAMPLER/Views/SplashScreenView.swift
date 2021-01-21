@@ -14,6 +14,10 @@ struct SplashScreenView: View {
     
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [Color.black, Color.red]), startPoint: .top, endPoint: .bottom)
+            .edgesIgnoringSafeArea(.all)
+        
+        BackgroundAnimationView()
+ 
     }
 }
 
