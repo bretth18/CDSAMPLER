@@ -20,75 +20,89 @@ struct BackgroundAnimationView: View {
     
     var body: some View {
         
+        
         ZStack {
                     Circle() // Largest
+                        .stroke(lineWidth: 2.0)
                         .frame(width: 300, height: 300, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 0.6503022313, green: 0.4740011692, blue: 0.4985639453, alpha: 1)))
+                        .foregroundColor(Color.white)
                         .scaleEffect(showLargest ? 4 : 0.5)
-                        .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
+                        .animation(Animation.easeInOut(duration: 8).repeatForever(autoreverses: true))
                         .onAppear(){
                             showLargest.toggle()
                         }
                     
                     Circle() // Larger
+                        .stroke(lineWidth: 2.0)
+
                         .frame(width: 250, height: 250, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 0.6717726588, green: 0.51033777, blue: 0.57929492, alpha: 1)))
+                        .foregroundColor(Color.white)
                         .scaleEffect(showLarger ? 1 : 0.5)
-                        .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
+                        .animation(Animation.easeInOut(duration: 8).repeatForever(autoreverses: true))
                         .onAppear(){
                             showLarger.toggle()
                         }
                     
                     Circle() // Large
+                        .stroke(lineWidth: 2.0)
+
                         .frame(width: 200, height: 200, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 0.6338826418, green: 0.349599123, blue: 0.4321095943, alpha: 1)))
+                        .foregroundColor(Color.white)
                         .scaleEffect(showLarge ? 4 : 0.5)
-                        .animation(Animation.easeOut(duration: 2).repeatForever(autoreverses: true))
+                        .animation(Animation.easeOut(duration: 8).repeatForever(autoreverses: true))
                         .onAppear(){
                             showLarge.toggle()
                         }
                     
                     Circle() // Small
+                        .stroke(lineWidth: 2.0)
+
                         .frame(width: 150, height: 150, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 0.5348948836, green: 0.2363169491, blue: 0.3430256546, alpha: 1)))
+                        .foregroundColor(Color.white)
                         .opacity(showSmall ? 4 : 0.1)
                         .scaleEffect(showSmall ? 1 : 0.5)
-                        .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
+                        .animation(Animation.easeInOut(duration: 8).repeatForever(autoreverses: true))
                         .onAppear(){
                             showSmall.toggle()
                         }
                     
                     Circle() // Smaller
+                        .stroke(lineWidth: 2.0)
+
                         .frame(width: 100, height: 100, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 0.5177612305, green: 0.1702933908, blue: 0.2867953777, alpha: 1)))
+                        .foregroundColor(Color.white)
                         .opacity(showSmaller ? 1 : 0.1)
                         .scaleEffect(showSmaller ? 4 : 0.5)
-                        .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
+                        .animation(Animation.easeInOut(duration: 8).repeatForever(autoreverses: true))
                         .onAppear(){
                             showSmaller.toggle()
                         }
                     
                     Circle() // Smallest
+                        .stroke(lineWidth: 2.0)
+
                         .frame(width: 50, height: 50, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 0.4813516736, green: 0.1270372272, blue: 0.2556577921, alpha: 1)))
+                        .foregroundColor(Color.white)
                         .opacity(showSmallest ? 1 : 0.1)
                         .scaleEffect(showSmallest ? 4 : 0.5)
-                        .animation(Animation.easeOut(duration: 2).repeatForever(autoreverses: true))
+                        .animation(Animation.easeOut(duration: 8).repeatForever(autoreverses: true))
                         .onAppear(){
                             showSmallest.toggle()
                         }
                     
                     Circle()
+                        .stroke(lineWidth: 2.0)
+
                         .frame(width: 12.5, height: 12.5, alignment: .center)
                         .opacity(showCentral ? 1 : 0.1)
                         .scaleEffect(showCentral ? 1 : 0.8)
-                        .animation(Animation.easeOut(duration: 1).repeatForever(autoreverses: true))
+                        .animation(Animation.easeOut(duration: 4).repeatForever(autoreverses: true))
                         .onAppear(){
                             showCentral.toggle()
                         }
                         
                 }
-        .opacity(0.3)
+        .opacity(0.2)
         
     }
 }
