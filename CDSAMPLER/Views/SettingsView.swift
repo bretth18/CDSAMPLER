@@ -12,6 +12,9 @@ struct SettingsView: View {
     // Observed object
     @ObservedObject var userSettings = Settings()
     
+    // Environment object for authentication
+    @EnvironmentObject var authState: AuthenticationState
+    
     var body: some View {
         NavigationView {
             
@@ -36,10 +39,57 @@ struct SettingsView: View {
                 }
                 
                 
+                Section(header: Text("ACCOUNT")) {
+                    
+                    // if user is logged in then we present a logout button
+                    if $authState.loggedInUser != nil {
+                        
+                        Button(action: {
+                            signoutTapped()
+                        }) {
+                            Text("SIGN OUT")
+                                .fontWeight(.bold)
+                                .padding()
+                                .background(Color.red)
+                                .cornerRadius(6)
+                                .foregroundColor(.white)
+                                .padding(10)
+                   
+                           
+                        }
+                        
+                    } else {
+                        // This should work by reading the updated state and displaying a new button for login after logout has been pressed
+                        
+                        NavigationLink(destination: AuthenticationView(authType:  .login)) {
+                            Text("SIGN IN")
+                                .fontWeight(.bold)
+                                .padding()
+                                .background(Color.green)
+                                .cornerRadius(6)
+                                .foregroundColor(.white)
+                                .padding(10)
+                   
+                           
+                        }
+                        
+                    }
+
+                }
+                
+                
             }
             
             .navigationBarTitle("SETTINGS")
         }
+    }
+    
+    
+    //-TODO: Add signout button on setting screen
+    private func signoutTapped() {
+        authState.signout()
+        print("sign out button hit")
+
     }
 }
 

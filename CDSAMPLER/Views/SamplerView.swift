@@ -12,6 +12,10 @@ struct SamplerView: View {
     // View needs to access the AudioRecorder instance
     @ObservedObject var audioRecorder: AudioRecorder
     
+    // Need to acess SessionStore so we can conditionally render the auth screen if the user isnt logged in (needs to be implmeneted more top level, will setup nav in future
+    
+    @EnvironmentObject var authState: AuthenticationState
+    
     // Initializer to setup Navbar Styling
     init() {
         
