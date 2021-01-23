@@ -18,19 +18,27 @@ struct LogoTitleView: View {
             
             Text("CD_SAMPLER")
                 .font(.largeTitle)
-                .fontWeight(.bold)
-                .lineLimit(2)
+                .fontWeight(.black)
+                .lineLimit(1)
+                .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                
+            
             
             Text("record/create/share samples")
                 .font(.headline)
         }
         .foregroundColor(.white)
         
+        
     }
 }
 
 struct LogoTitleView_Previews: PreviewProvider {
     static var previews: some View {
+        
+
+        
         LogoTitleView()
+            .background(Color.black ).ignoresSafeArea()
     }
 }

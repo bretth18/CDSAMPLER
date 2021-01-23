@@ -13,7 +13,7 @@ struct SplashScreenView: View {
 //    let imageName: String
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [Color.black, Color.red]), startPoint: .top, endPoint: .bottom)
+        LinearGradient(gradient: Gradient(colors: [Color.black, Color.black]), startPoint: .top, endPoint: .bottom)
             .edgesIgnoringSafeArea(.all)
         
         BackgroundAnimationView()
